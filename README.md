@@ -1,2 +1,2 @@
 # Music-c-
-This project will be a code of something music related, I do not yet know exactly what it will end up being, but it will be something music rekated, with three classes for instruments, music genres, and artists.
+This project models a simple music management system using C++ and object-oriented programming. It includes key entities like Artists, Instruments, Genres, and Songs, demonstrating how they interact in real-world scenarios.
