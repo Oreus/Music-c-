@@ -1,4 +1,12 @@
 # Music-c-
-This project models a simple music management system using C++ and object-oriented programming. It includes key entities like Artists, Instruments, Genres, and Songs, demonstrating how they interact in real-world scenarios.
+This project is a basic object-oriented program that models a music management system. It includes the following main components:
+	•	Genres: Represents different music genres.
+	•	Artists: Stores details about artists and their associated genres.
+	•	Songs: Represents songs with attributes like title, duration, genre, and artist.
+	•	Instruments: Models different types of musical instruments, with specific implementations for Guitars and Drums.
 
-(Attempted to add in diagram, but Github is not letting me)
+Features
+
+	•	Create and manage songs, artists, genres, and instruments.
+	•	Specialized classes for specific instruments (e.g., Guitar and Drum).
+	•	Demonstrates inheritance, encapsulation, and polymorphism.
