@@ -11,7 +11,7 @@ private:
     string origin;
 
 public:
-    Genre(string genreName, string genreOrigin) : name(genreName), origin(genreOrigin) {}
+    Genre(string name, string origin) : name(name), origin(origin) {}
     string getName() const { return name; }
     string getOrigin() const { return origin; }
     void setName(string genreName) { name = genreName; }
@@ -26,7 +26,7 @@ private:
     Genre* genre;
 
 public:
-    Artist(string artistName, int artistAge, Genre* artistGenre) : name(artistName), age(artistAge), genre(artistGenre) {}
+    Artist(string name, int age, Genre* genre) : name(name), age(age), genre(genre) {}
     string getName() const { return name; }
     int getAge() const { return age; }
     Genre* getGenre() const { return genre; }
@@ -44,8 +44,7 @@ private:
     Artist* artist;
 
 public:
-    Song(string songTitle, double songDuration, Genre* songGenre, Artist* songArtist) : title(songTitle), duration(songDuration), genre(songGenre), artist(songArtist) {}
-
+    Song(string title, double duration, Genre* genre, Artist* artist) : title(title), duration(duration), genre(genre), artist(artist) {}
     string getTitle() const { return title; }
     double getDuration() const { return duration; }
     Genre* getGenre() const { return genre; }
@@ -65,9 +64,7 @@ private:
     int strings;
 
 public:
-    Instrument(string instrumentName, string instrumentType, int numberOfStrings) : name(instrumentName), type(instrumentType), strings(numberOfStrings) {}
-    virtual ~Instrument() {} 
-
+    Instrument(string name, string type, int strings) : name(name), type(type), strings(strings) {}
     string getName() const { return name; }
     string getType() const { return type; }
     int getStrings() const { return strings; }
@@ -84,8 +81,7 @@ public:
 //Class: Guitar
 class Guitar : public Instrument {
 public:
-    Guitar(string instrumentName, int numberOfStrings) : Instrument(instrumentName, "Guitar", numberOfStrings) {}
-
+    Guitar(string name, int strings) : Instrument(name, "Guitar", strings) {}
     void play() const {
         cout << "Strumming the guitar with " << getStrings() << " strings." << endl;
     }
@@ -94,11 +90,10 @@ public:
 //Class: Drum
 class Drum : public Instrument {
 private:
-    string drumType; 
+    string drumType;
 
 public:
-    Drum(string instrumentName, string type) : Instrument(instrumentName, "Drum", 0), drumType(type) {}
-
+    Drum(string name, string drumType) : Instrument(name, "Drum", 0), drumType(drumType) {}
     string getDrumType() const { return drumType; }
     void setDrumType(string type) { drumType = type; }
 
